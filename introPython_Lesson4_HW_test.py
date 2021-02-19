@@ -16,14 +16,14 @@ values = [1, 2, 3, 4, 5]
 values = tuple(values)
 print(type(values))  # <class 'tuple'>
 
-# 5 - нужно понять
+# 5
 values = [1, 2, 3, 4, 5]
 result = []
 for value in values:
     result.append(value)
 print(result)  # [1, 2, 3, 4, 5]
 
-# 6 - нужно понять
+# 6
 values = [1, 2, 3, 4, 5]
 result = []
 for value in values[::-1]:
@@ -45,13 +45,13 @@ new_value = values
 new_value.append(6)
 print(values)  # [1, 2, 3, 4, 5, 6]
 
-# 10 - нужно понять
+# 10
 values = [1, 2, 3, 4, 5]
 new_value = values.copy()
 new_value.append(6)
 print(values)  # [1, 2, 3, 4, 5]
 
-# 11 - нужно понять
+# 11
 values = [0] * 6
 values[0] = 1
 print(values)  # [1, 0, 0, 0, 0, 0]
@@ -62,12 +62,12 @@ values = [value] * 6
 value = 1
 print(values)  # [0, 0, 0, 0, 0, 0]
 
-# 13 - нужно понять
+# 13
 my_list = [0]
 values = [my_list] * 3
 print(values)  # [[0], [0], [0]]
 
-# 14 - нужно понять
+# 14
 my_list = [0]
 values = [my_list] * 3
 my_list.append(1)
