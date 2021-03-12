@@ -25,7 +25,7 @@ print(count)
 # местах из my_list_2.
 my_list_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 my_list_2 = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-my_result = my_list_1[1::2] + my_list_2[::2]
+my_result = my_list_1[::2] + my_list_2[1::2]
 print(my_result)
 
 #####
