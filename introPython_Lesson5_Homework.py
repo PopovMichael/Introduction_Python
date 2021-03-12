@@ -9,11 +9,12 @@ print(count)
 
 # 2
 # Дано целое число (int). Определить сколько нулей в конце этого числа.
-number = 100100010000
-count = 0
-while not number % 2:
-    count += 1
-    number //= 2
+my_number = 11025330053053000
+my_number_str = str(my_number)
+result_1 = len(my_number_str)
+my_number_int = int(my_number_str[::-1])
+result_2 = len(str(my_number_int))
+count = result_1 - result_2
 print(count)
 
 ###############
@@ -38,13 +39,13 @@ print(my_result)
 # my_result [2, 4, 15, 25]
 my_list_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 my_list_2 = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-for value in my_list_1:
-    if value % 2:
-        my_list_1.remove(value)
-for value in my_list_2:
-    if not value % 2:
-        my_list_2.remove(value)
-my_result = my_list_1 + my_list_2
+my_result = []
+for element in my_list_1:
+    if not element % 2:
+        my_result.append(element)
+for element in my_list_2:
+    if element % 2:
+        my_result.append(element)
 print(my_result)
 
 ###############
@@ -75,14 +76,13 @@ print(my_list)
 # Например "43 больше чем 34 но меньше чем 56". Найти сумму ВСЕХ ЧИСЕЛ
 # (А НЕ ЦИФР) в этой строке. Для данного примера ответ - 133.
 my_str = "43 больше чем 34 но меньше чем 56"
-my_list = sorted(my_str.split(" "))
-result = int(my_list[0]) + int(my_list[1]) + int(my_list[2])
-print(result)  # решение примера
-
-my_new_str = "12 08 1993"
-my_new_list = my_new_str.split(" ")
-new_result = int(my_new_list[0]) + int(my_new_list[1]) + int(my_new_list[2])
-print(new_result)  # мой пример
+new_str = my_str.split(" ")
+sum_of_numbers = 0
+for number in new_str:
+    if number.isdigit():
+        number = int(number)
+        sum_of_numbers += number
+print(sum_of_numbers)
 
 ###############
 
@@ -140,7 +140,7 @@ print(sub_str)
 my_list = [2, 4, 1, 5, 3, 9, 0, 7]
 count = 0
 for i in range(len(my_list[1:])):
-    sum = my_list[i - 1] + my_list[i + 1]
-    if my_list[i] > sum:
+    sum_of_numbers = my_list[i - 1] + my_list[i + 1]
+    if my_list[i] > sum_of_numbers:
         count += 1
 print(count)
